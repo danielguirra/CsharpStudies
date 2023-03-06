@@ -1,3 +1,3 @@
 # CsharpStudies
 
-### Repositorio salvo exercicios do Curso de C# da UDEMY
+### Repositorio para salvar exercicios do Curso de C# da UDEMY
