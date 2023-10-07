@@ -4,31 +4,37 @@ namespace Program
 {
    class Produto
    {
-      public string nome;
-      public double preco;
-      public int quantidade;
+      public string Nome;
+      public double Preco;
+      public int Quantidade;
 
+      public Produto(string nome, double preco, int quantidade)
+      {
+         Nome = nome;
+         Preco = preco;
+         Quantidade = quantidade;
+      }
       public double ValorTotalEmEstoque()
       {
-         return preco * quantidade;
+         return Preco * Quantidade;
       }
 
       public void AdicionarProdutos(int quantidadeToadd)
       {
-         quantidade += quantidadeToadd;
+         Quantidade += quantidadeToadd;
       }
 
       public void RemoverProdutos(int quantidadeRemove)
       {
-         quantidade -= quantidadeRemove;
+         Quantidade -= quantidadeRemove;
       }
 
       public override string ToString()
       {
-         return nome +
-               ", Valor : $" + preco.ToString("f2", System.Globalization.CultureInfo.InvariantCulture) +
+         return Nome +
+               ", Valor : $" + Preco.ToString("f2", System.Globalization.CultureInfo.InvariantCulture) +
                ", "
-               + quantidade + " unidades" + ", valor total de : $" +
+               + Quantidade + " unidades" + ", valor total de : $" +
                ValorTotalEmEstoque().ToString("f2", System.Globalization.CultureInfo.InvariantCulture);
       }
 
